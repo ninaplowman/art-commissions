@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homenaje">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Art by Nina Plowman</title>
+<style>
+body {
+    text-align: center;
+    font-family: garamond;
+    background-color: #f2f3d9;
+    margin: 0;
+}
+a {
+    color: #c63127;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    color: #e8c119;
+    transition: 0.3s;
+}
+ul.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e8c119;
+  z-index: 1;
+}
+li.navbar-list {
+    float: right;
+    font-family: Homenaje;
+    font-size: 40px;
+}
+li.navbar-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+li.navbar-list a:hover {
+  background-color: #000;
+  color: #c6d7e1;
+}
+.navbar {
+    padding: 34px 0px;
+    z-index: 1;
+}
+.main {
+    font-size: 30px;
+    color: #000;
+    padding: 0 0 20px 0;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e8c119;
+    color: black;
+    font-family: Homenaje;
+    font-size: 20px;
+    text-align: center;
+}
+ul.footer-list {
+    list-style-type: none;
+    text-align: left;
+}
+li.footer-list {
+    font-family: Homenaje;
+    font-size: 20px;
+}
+li.footer-list a {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}
+li.footer-list a:hover {
+    color: #c63127;
+}
+/* Style the form element with a border around it */
+form {
+  border: none;
+  width: 75%;
+  text-align: left;
+}
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 0px;
+  margin: 10px;
+  background-color: #e8c119;
+  font-size: 20px;
+
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 6px;
+  margin: 3px 0;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  background-color: #c63127;
+  color: white;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  border: none;
+  align: left;
+  width: 50%;
+  transition: 0.3s;
+}
+input[type=submit]:hover {
+    background-color: #c6d7e1;
+    color: black;
+}
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+  color: white;
+}
+::-ms-input-placeholder {
+  color: white;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 500px;
+  width: 500px;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+    p {
+        font-size: 12px;
+    }
+    li {
+        font-size: 20px;
+    }
+    .column {
+        width: 100%;
+    }
+    .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+    <ul class="navbar-list">
+        <li class="navbar-list"><a href="/contact">contact</a></li>
+        <li class="navbar-list"><a href="/shop">shop</a></li>
+        <li class="navbar-list"><a href="/commissions">commissions</a></li>
+        <li class="navbar-list"><a href="/work">work</a></li>
+        <li class="navbar-list"><a href="/about">about</a></li>
+        <li class="navbar-list"><a href="/home">home</a></li>
+    </ul>
+</div>
+    <div class="main">
+        <p>Hello. <a href="#">Link.</a><br />
+        <div class="w3-animate-bottom"><img src="https://i.imgur.com/3lsFanT.png"><img src="https://i.imgur.com/Yj5H36F.png"><img src="https://i.imgur.com/Oh85xkp.png"> </div>
+        </p>
+        <img id="myImg" src="https://i.imgur.com/He8kgEP.png" alt="Under Wings">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+    </div>
+<div class="footer">
+    <div class="row">
+        <div class="column">
+            <ul class="footer-list">
+                <li class="footer-list"><a href="http://wwww.instagram.com">Instagram</a></li>
+                <li class="footer-list"><a href="http://www.twitter.com">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <p>The End.</p>
+        </div>
+        <div class="column">
+            <form action="action_page.php">
+                <div class="container">
+                  <p>Subscribe to the mailing list</p>
+                </div>
+                <div class="container">
+                  <input type="text" placeholder="email address" name="mail" required>
+                </div>
+              
+                <div class="container">
+                  <input type="submit" value="submit">
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+</body>
