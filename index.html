@@ -177,7 +177,6 @@ color: white;
 /* End Email Form */
 
 /* Image Gallery */
- /* Style the Image Used to Trigger the Modal */
  .myImg {
     border-radius: 5px;
     cursor: pointer;
@@ -186,22 +185,20 @@ color: white;
 
 .myImg:hover {opacity: 0.7;}
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
 }
 
-/* Modal Content (Image) */
 .modal-content {
     margin: auto;
     display: block;
@@ -209,7 +206,6 @@ color: white;
     max-width: 700px;
 }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
     margin: auto;
     display: block;
@@ -221,7 +217,6 @@ color: white;
     height: 150px;
 }
 
-/* Add Animation - Zoom in the Modal */
 .modal-content, #caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -239,7 +234,6 @@ color: white;
     to {transform:scale(1)}
 }
 
-/* The Close Button */
 .close {
     position: absolute;
     top: 15px;
@@ -270,7 +264,6 @@ color: white;
       width: 100%;
   }
 }
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     .modal-content {
         width: 100%;
@@ -283,10 +276,10 @@ color: white;
 <div class="navbar">
     <ul class="navbar-list">
         <li class="navbar-list" style="float:left"><img src="https://i.imgur.com/rD8TmPM.gif"></li>
-        <li class="navbar-list"><a href="/contact">contact</a></li>
-        <li class="navbar-list"><a href="/shop">shop</a></li>
-        <li class="navbar-list"><a href="/commissions">commissions</a></li>
-        <li class="navbar-list"><a href="/about">about</a></li>
+        <li class="navbar-list"><a href="/contact.html">contact</a></li>
+        <li class="navbar-list"><a href="/shop.html">shop</a></li>
+        <li class="navbar-list"><a href="/commissions.html">commissions</a></li>
+        <li class="navbar-list"><a href="/about.html">about</a></li>
         <li class="navbar-list"><a href="/index.html">home</a></li>
     </ul>
 </div>
@@ -298,22 +291,18 @@ color: white;
         <p>I specialize in character design.</p>
         <br />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- Trigger the Modal -->
-<img class="myImg" src="https://i.imgur.com/3lsFanT.png" alt="Trolltunga, Norway" height="300">
-<img class="myImg" src="https://i.imgur.com/Yj5H36F.png" alt="Trolltunga, Norway" height="300">
-<img class="myImg" src="https://i.imgur.com/Oh85xkp.png" alt="Trolltunga, Norway" height="300">
-<img class="myImg" src="https://i.imgur.com/He8kgEP.png" alt="Trolltunga, Norway" height="300">
 
-<!-- The Modal -->
+<img class="myImg" src="https://i.imgur.com/3lsFanT.png" alt=" " height="300">
+<img class="myImg" src="https://i.imgur.com/Yj5H36F.png" alt=" " height="300">
+<img class="myImg" src="https://i.imgur.com/Oh85xkp.png" alt=" " height="300">
+<img class="myImg" src="https://i.imgur.com/He8kgEP.png" alt=" " height="300">
+
 <div id="myModal" class="modal">
 
-  <!-- The Close Button -->
   <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
-  <!-- Modal Content (The Image) -->
   <img class="modal-content" id="img01">
 
-  <!-- Modal Caption (Image Text) -->
   <div id="caption"></div>
 </div>
     </div>
@@ -349,10 +338,8 @@ color: white;
 </div>
 </div>
 <script>
-// Get the modal
   var modal = document.getElementById('myModal');
   
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
   var img = $('.myImg');
   var modalImg = $("#img01");
   var captionText = document.getElementById("caption");
@@ -363,10 +350,8 @@ color: white;
       captionText.innerHTML = this.alt;
   });
   
-  // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
   
-  // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
     modal.style.display = "none";
   }
